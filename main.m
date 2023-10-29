@@ -61,4 +61,5 @@ T13 = T12*T23
 T16 = T13*T36
 T06 = T01*T16
 
+q=parameters(T06);
 

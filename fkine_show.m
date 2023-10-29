@@ -12,14 +12,14 @@ a3=0.165;
 
 % %% Standard
 L(1) = Link('d',0.78, 'a',0.41,   'alpha',-pi/2,  'qlim','[-180*degree 180*degree]'  );
-L(2) = Link('d',0,    'a',1.075,  'alpha',0,      'qlim','[-60*degree 85*degree]','offset', -pi/2);
+L(2) = Link('d',0,    'a',1.075,  'alpha',0,      'qlim','[-60*degree 85*degree]','offset', -pi/2); % offset is the theta, when rotating from x_i to x(i+1) around the axis of z_(i+1)
 L(3) = Link('d',0,    'a',0.165,  'alpha',-pi/2,  'qlim','[-180*degree 60*degree]');
 L(4) = Link('d',1.056,'a',0,      'alpha',pi/2,   'qlim','[-300*degree 300*degree]');
 L(5) = Link('d',0,    'a',0,      'alpha',-pi/2,  'qlim','[-100*degree 100*degree]');
 L(6) = Link('d',0.25, 'a',0,      'alpha',0,      'qlim','[-360*degree 360*degree]');
 
 
-L16 = SerialLink(L,'name','ABB7600-500');
+L16 = SerialLink(L,'name','IRB7600-500');
 initial_pose = [0 0 0 0 0 0];
 L16.display();
 fkine_value = L16.fkine(initial_pose);
